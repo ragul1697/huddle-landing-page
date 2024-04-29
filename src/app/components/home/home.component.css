@@ -1,0 +1,108 @@
+@import "../../../styles.css";
+
+.home-container {
+  background-image: url(../../../assets/images/bg-hero-desktop.svg);
+  background-size: cover 100%;
+  background-repeat: no-repeat;
+  background-color: var(--very-pale-cyan);
+
+  padding: 5% 6%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .primary {
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+
+  font-size: .9rem;
+  color: var(--very-dark-cyan);
+  background-color: white;
+}
+
+.header .primary:hover {
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 60px;
+  padding: 20px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  column-gap: 20px;
+}
+
+.container .text-container .title {
+  font-size: 2rem;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.container .text-container .paraph {
+  padding-right: 130px;
+  margin-bottom: 40px;
+
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.container .text-container .btn {
+  padding: 15px 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--pink);
+
+  font-weight: 600;
+  color: white;
+}
+
+.container .text-container .btn {
+  cursor: pointer;
+}
+
+.boards-mockups {
+  max-width: 100%;
+  width: 650px;
+  object-fit: cover;
+}
+
+@media only screen and (width <=768px) {
+  .home-container .container .text-container .title {
+    font-size: 1.5rem;
+  }
+
+  .home-container .container .text-container .paraph {
+    padding: 0;
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (width <=425px) {
+  .home-container .header .logo-header {
+    max-width: 120px;
+  }
+
+  .home-container .header .primary {
+    padding: 5px 20px;
+    font-size: .6rem;
+  }
+
+  .home-container .container .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 50px;
+  }
+}
